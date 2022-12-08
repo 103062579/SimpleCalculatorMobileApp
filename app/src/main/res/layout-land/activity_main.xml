@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/radioOp"
+        app:layout_constraintBottom_toTopOf="@id/number2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/equals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number1" />
+
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="727dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/equals"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number2" />
+
+    <RadioGroup
+        android:id="@+id/radioOp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radioMult"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:text="Mult"
+            app:layout_constraintBottom_toTopOf="@id/radioSub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioSub"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:text="Subtract"
+            app:layout_constraintBottom_toTopOf="@id/number2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioMult" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equals"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
